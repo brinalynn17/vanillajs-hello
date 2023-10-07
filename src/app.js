@@ -6,7 +6,7 @@ import "./style.css";
 import "./assets/img/Prince.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function excuse() {
+window.onload = function onlyForYou() {
   //write your code here
 
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
@@ -20,23 +20,23 @@ window.onload = function excuse() {
     "while I was praying"
   ];
 
-  function randomElement(array) {
+  function ranElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  let excuse =
-    randomElement(who) +
+  let onlyForYou =
+    ranElement(who) +
     " " +
-    randomElement(action) +
+    ranElement(action) +
     " " +
-    randomElement(what) +
+    ranElement(what) +
     " " +
-    randomElement(when);
+    ranElement(when);
 
-  console.log(excuse);
+  console.log(onlyForYou);
 
-  const pElement = document.getElementsByTagName("p");
+  const myDomeExcuse = document.getElementsByTagName("p");
 
-  pElement[0].innerText = excuse;
-  console.log(pElement[0]);
+  myDomeExcuse[0].innerText = onlyForYou;
+  console.log(myDomeExcuse[0]);
 };
