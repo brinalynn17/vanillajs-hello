@@ -5,21 +5,37 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = function excuse() {
   //write your code here
 
-let who = ['The dog', 'My grandma', 'His turtle', 'My bird'];
-let action = ['ate', 'peed', 'crushed', 'broke'];
-let what = ['my homework', 'the keys', 'the car'];
-let when = ['before the class', 'right on time', 'when I finished', 'during my lunch', 'while I was praying'];
+  let who = ["The dog", "My grandma", "His turtle", "My bird"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    "before the class",
+    "right on time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
 
-function randomElement(array) {
-  return array[Math.round(Math.random() * array.length)];
+  function randomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
-}
+  let excuse =
+    randomElement(who) +
+    " " +
+    randomElement(action) +
+    " " +
+    randomElement(what) +
+    " " +
+    randomElement(when);
 
-let excuse = randomElement(who) + " "+ randomElement(action)+" "+ randomElement(what)+" "+ randomElement(when);
+  console.log(excuse);
 
-console.log(excuse)
-console.log("Hello Rigo from the console!");
+  const pElement = document.getElementsByTagName("p");
+
+  pElement[0].innerText = excuse;
+  console.log(pElement[0]);
 };
