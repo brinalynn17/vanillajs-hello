@@ -9,9 +9,9 @@ import "./assets/img/4geeks.ico";
 window.onload = function onlyForYou() {
   //write your code here
 
-  let who = ["The dog", "My grandma", "His turtle", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
-  let what = ["my homework", "the keys", "the car"];
+  let who = ["The dog", "My grandma", "His turtle", "My bird", "My Grandsons"];
+  let action = ["ate", "peed", "crushed", "broke", "bathed"];
+  let what = ["my homework", "the keys", "the car", "my bed"];
   let when = [
     "before the class",
     "right on time",
@@ -20,18 +20,18 @@ window.onload = function onlyForYou() {
     "while I was praying"
   ];
 
-  function ranElement(array) {
+  function myRanElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
 
   let onlyForYou =
-    ranElement(who) +
+    myRanElement(who) +
     " " +
-    ranElement(action) +
+    myRanElement(action) +
     " " +
-    ranElement(what) +
+    myRanElement(what) +
     " " +
-    ranElement(when);
+    myRanElement(when);
 
   console.log(onlyForYou);
 
